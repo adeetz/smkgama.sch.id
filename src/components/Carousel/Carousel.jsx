@@ -15,18 +15,26 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    adaptiveHeight: false,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       <Slider {...settings} className="h-full">
         {[Photo, Photo2, Photo3].map((photo, index) => (
-          <div key={index} className="relative h-screen">
+          <div key={index} className="relative">
             <img
-              className="absolute inset-0 object-cover object-center w-full h-full"
+              className="object-cover object-center w-full h-auto"
               src={photo}
-              alt={`Kelulusan SMK Garuda Mahadhika ${index + 1}`}
+              alt={`Website SMK Garuda Mahadhika ${index + 1}`}
             />
           </div>
         ))}

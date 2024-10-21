@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Briefcase } from "lucide-react";
 import Dudi1 from "../../assets/dudi/dudi1.png";
 import Dudi2 from "../../assets/dudi/dudi2.png";
 import Dudi3 from "../../assets/dudi/dudi3.png";
@@ -10,46 +12,42 @@ import Dudi8 from "../../assets/dudi/dudi8.webp";
 import Dudi9 from "../../assets/dudi/dudi9.webp";
 
 const Brand = () => {
+  const dudiImages = [Dudi1, Dudi2, Dudi3, Dudi4, Dudi5, Dudi6, Dudi7, Dudi8, Dudi9];
+
   return (
-    <>
-      <section className="bg-[#141414] py-8">
-        <div className="container text-center">
-          <h2 className="mb-6 text-2xl font-bold text-white">
+    <section className="py-16 bg-gradient-to-b from-gray-900 to-black">
+      <div className="container px-4 mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center justify-center mb-12"
+        >
+          <Briefcase className="mr-3 text-white" size={32} />
+          <h2 className="text-3xl font-bold text-center text-white">
             Kerjasama Dunia Usaha dan Industri
           </h2>
-          <div className="flex flex-wrap justify-around gap-6">
-            {/* Pindahkan grup gambar ke dalam map untuk lebih efisien */}
-            {[Dudi1, Dudi2, Dudi3, Dudi4, Dudi5, Dudi6, Dudi7, Dudi8, Dudi9,].map((dudi, index) => (
-              <div key={index} className="group">
-                <img
-                  src={dudi}
-                  alt={`Dudi ${index + 1}`}
-                  className="max-w-[100px] transition-transform duration-300 ease-in-out transform group-hover:scale-105 shadow-lg hover:shadow-2xl animate-move"
-                />
-              </div>
-            ))}
-          </div>
+        </motion.div>
+        <div className="grid grid-cols-3 gap-8 md:grid-cols-5 justify-items-center">
+          {dudiImages.map((dudi, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="p-4 transition-all duration-300 bg-white rounded-lg shadow-lg hover:shadow-2xl"
+            >
+              <img
+                src={dudi}
+                alt={`Dudi ${index + 1}`}
+                className="object-contain w-20 h-20"
+              />
+            </motion.div>
+          ))}
         </div>
-      </section>
-
-      <style>
-        {`
-          @keyframes move {
-            0%,
-            100% {
-              transform: translateX(0);
-            }
-            50% {
-              transform: translateX(10px); /* Ubah jarak untuk gerakan */
-            }
-          }
-
-          .animate-move {
-            animation: move 1s ease-in-out infinite; /* Ubah durasi dan kecepatan animasi di sini */
-          }
-        `}
-      </style>
-    </>
+      </div>
+    </section>
   );
 };
 

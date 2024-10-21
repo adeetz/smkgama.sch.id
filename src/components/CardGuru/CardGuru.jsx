@@ -166,7 +166,7 @@ const SliderComp = () => {
   const arrowRef = useRef(null);
 
   return (
-    <div className="relative p-5 bg-gray-100">
+    <div className="relative p-5 bg-gradient-to-b from-gray-100 to-white">
       <div className="container p-6 mx-auto my-8 text-center">
         <h2 className="flex items-center justify-center text-3xl font-bold text-gray-800">
           <GiTeacher className="mr-2 text-3xl" /> Guru dan Staff Sekolah
@@ -177,16 +177,18 @@ const SliderComp = () => {
           <Project item={item} key={i} />
         ))}
       </Slider>
-      <div className="absolute transform -translate-y-1/2 top-1/2 left-4">
-        <button onClick={() => arrowRef.current.slickPrev()} className="text-2xl text-teal-500 hover:text-teal-700">
-          <IoIosArrowBack />
-        </button>
-      </div>
-      <div className="absolute transform -translate-y-1/2 top-1/2 right-4">
-        <button onClick={() => arrowRef.current.slickNext()} className="text-2xl text-teal-500 hover:text-teal-700">
-          <IoIosArrowForward />
-        </button>
-      </div>
+      <button
+        onClick={() => arrowRef.current.slickPrev()}
+        className="absolute z-10 p-2 -translate-y-1/2 bg-white rounded-full shadow-md left-4 top-1/2 hover:bg-gray-100"
+      >
+        <IoIosArrowBack className="text-2xl text-teal-500 hover:text-teal-700" />
+      </button>
+      <button
+        onClick={() => arrowRef.current.slickNext()}
+        className="absolute z-10 p-2 -translate-y-1/2 bg-white rounded-full shadow-md right-4 top-1/2 hover:bg-gray-100"
+      >
+        <IoIosArrowForward className="text-2xl text-teal-500 hover:text-teal-700" />
+      </button>
     </div>
   );
 };

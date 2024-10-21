@@ -58,7 +58,7 @@ const Products = () => {
           whileInView="show"
           className="mb-16 text-5xl font-bold text-center text-gray-900"
         >
-          PROGRAM KEAHLIAN
+          PROGRAM KEAHLIAN SMK GARUDA
         </motion.h1>
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {ProductsData.map((item) => (

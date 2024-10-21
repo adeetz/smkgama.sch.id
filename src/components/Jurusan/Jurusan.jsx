@@ -50,42 +50,47 @@ const ProductsData = [
 
 const Products = () => {
   return (
-    <div className="py-20 bg-gray-100">
+    <div className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="container px-6 mx-auto">
         <motion.h1
           variants={fadeUp(0.2)}
           initial="hidden"
           whileInView="show"
-          className="mb-16 text-4xl font-bold text-center text-gray-900"
+          className="mb-16 text-5xl font-bold text-center text-gray-900"
         >
           PROGRAM KEAHLIAN
         </motion.h1>
-        {/* Card section */}
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {ProductsData.map((item) => (
             <motion.div
               variants={fadeUp(item.delay)}
               key={item.id}
               initial="hidden"
-              whileInView={"show"}
-              className="max-w-[340px] mx-auto transition-transform transform hover:scale-105"
+              whileInView="show"
+              className="flex flex-col h-full"
             >
-              {/* Title above card */}
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-6">
-                {item.title}
-              </h2>
-              
-              <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl flex flex-col items-center">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="mx-auto mb-6 w-36 h-36 object-cover rounded-full shadow-md transition-transform duration-500 hover:scale-110"
-                />
-                <div className="space-y-4 text-center">
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-                  <button className="px-8 py-3 mt-6 text-lg text-white rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-110">
+              <div className="flex flex-col h-full overflow-hidden transition-all duration-300 transform bg-white shadow-xl rounded-xl hover:-translate-y-2 hover:shadow-2xl">
+                <div className="relative h-48 overflow-hidden group">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-15000 ease-linear transform group-hover:rotate-[720deg]"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                    <h2 className="px-4 text-2xl font-bold text-center text-white">
+                      {item.title}
+                    </h2>
+                  </div>
+                </div>
+                <div className="flex flex-col flex-grow p-6">
+                  <p className="flex-grow text-gray-600">{item.desc}</p>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-6 py-3 mt-6 text-lg font-medium text-white transition duration-300 rounded-full shadow-md bg-gradient-to-r from-indigo-500 to-purple-600 hover:shadow-lg"
+                  >
                     DAFTAR SEKARANG
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </motion.div>

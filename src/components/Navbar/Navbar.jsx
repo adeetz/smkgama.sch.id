@@ -87,24 +87,8 @@ const Navbar = () => {
                 </motion.div>
 
                 {/* Optional: Mobile Menu for when isOpen is true */}
-                {isOpen && (
-                    <div className="absolute left-0 w-full bg-white shadow-lg lg:hidden top-full">
-                        <ul className="flex flex-col items-center">
-                            {NavbarMenu.map((item) => (
-                                <li key={item.id} className="py-2">
-                                    <a
-                                        href={item.link}
-                                        className="text-lg text-gray-700 hover:text-secondary"
-                                    >
-                                        {item.title}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-            </nav>
 
+            </nav>
             {/* Spacer to prevent content jump when navbar becomes fixed */}
             {scrolled && <div style={{ height: `${navbarHeight}px` }} />}
 

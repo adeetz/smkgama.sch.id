@@ -23,7 +23,7 @@ const Hero = () => {
                     <HiMiniInformationCircle className="mr-3 text-5xl text-indigo-600" />
                     Informasi Dokumen Pendaftaran
                 </h2>
-                <p className="max-w-2xl mx-auto text-xl text-indigo-600">Dokumen yang perlu disiapkan untuk kelancaran proses pendaftaran Anda.</p>
+                <p className="max-w-2xl mx-auto text-xl text-indigo-600">Dokumen yang perlu disiapkan</p>
             </div>
 
             <div className={`grid gap-6 md:grid-cols-2 lg:grid-cols-3 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>

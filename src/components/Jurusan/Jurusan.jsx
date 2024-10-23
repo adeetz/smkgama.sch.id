@@ -5,11 +5,11 @@ import P3 from "../../assets/mlpb.webp";
 import { motion } from "framer-motion";
 
 export const fadeUp = (delay) => ({
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay, ease: "easeInOut" },
+    transition: { duration: 0.4, delay, ease: "easeOut" },
   },
 });
 
@@ -19,7 +19,7 @@ const ProductsData = [
     title: "Teknik Komputer Jaringan dan Telekomunikasi (TKJT)",
     image: P1,
     desc: "Lulusan siap bekerja sebagai teknisi jaringan atau ahli telekomunikasi",
-    delay: 0.5,
+    delay: 0.2,
     color: "from-red-500 to-red-600",
   },
   {
@@ -27,7 +27,7 @@ const ProductsData = [
     title: "Desain Komunikasi Visual (DKV)",
     desc: "Lulusan DKV ahli dalam merancang grafis, ilustrasi, dan media digital untuk industri kreatif.",
     image: P2,
-    delay: 0.8,
+    delay: 0.3,
     color: "from-purple-500 to-purple-600",
   },
   {
@@ -35,25 +35,25 @@ const ProductsData = [
     title: "Manajemen Perkantoran dan Layanan Bisnis (MPLB)",
     desc: "Lulusan MPLB memiliki keterampilan manajemen dokumen, layanan pelanggan, dan operasional kantor untuk mendukung efisiensi perusahaan.",
     image: P3,
-    delay: 1.1,
+    delay: 0.4,
     color: "from-blue-300 to-blue-400",
   },
 ];
 
 const Products = () => {
   return (
-    <div className="py-10 md:py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-      <div className="container px-4 mx-auto md:px-6">
+    <div className="py-12 bg-gray-50">
+      <div className="container px-4 mx-auto">
         <motion.h2
-          variants={fadeUp(0.2)}
+          variants={fadeUp(0.1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mb-8 text-3xl font-bold text-center text-gray-900 md:mb-16 md:text-5xl"
+          className="mb-8 text-2xl font-bold text-center text-gray-900 md:text-3xl"
         >
-          PROGRAM KEAHLIAN SMK GARUDA MAHADHIKA
+          Program Keahlian
         </motion.h2>
-        <div className="grid grid-cols-1 gap-8 md:gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ProductsData.map((item) => (
             <motion.div
               variants={fadeUp(item.delay)}
@@ -61,30 +61,29 @@ const Products = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="flex flex-col h-full"
             >
-              <div className="flex flex-col h-full overflow-hidden transition-all duration-300 transform bg-white shadow-xl rounded-xl hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative overflow-hidden aspect-w-16 aspect-h-9 group">
+              <div className="overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
+                <div className="relative aspect-[4/3] overflow-hidden group">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-15000 ease-linear transform group-hover:rotate-[720deg]"
+                    className="w-full h-full object-contain transition-transform duration-15000 ease-linear transform group-hover:rotate-[720deg]"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                    <h2 className="px-4 text-xl font-bold text-center text-white md:text-2xl">
+                  <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-black/40 hover:bg-black/30">
+                    <h3 className="px-4 text-lg font-semibold text-center text-white">
                       {item.title}
-                    </h2>
+                    </h3>
                   </div>
                 </div>
-                <div className="flex flex-col flex-grow p-4 md:p-6">
-                  <p className="flex-grow text-sm text-gray-600 md:text-base">{item.desc}</p>
+                <div className="p-4">
+                  <p className="mb-4 text-sm text-gray-600 line-clamp-2">{item.desc}</p>
                   <motion.a
                     href="#"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-4 py-2 mt-4 text-base font-medium text-white transition duration-300 rounded-full shadow-md md:px-6 md:py-3 md:mt-6 md:text-lg bg-gradient-to-r ${item.color} hover:shadow-lg text-center`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`inline-block w-full py-2 text-sm font-medium text-white text-center rounded-lg transition-all bg-gradient-to-r ${item.color} hover:shadow-md`}
                   >
-                    DAFTAR SEKARANG
+                    Daftar Sekarang
                   </motion.a>
                 </div>
               </div>

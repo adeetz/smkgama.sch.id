@@ -20,11 +20,11 @@ const App = () => {
       <ImageWithCaption />
       <Jurusan />
       <InstagramEmbed />
+      <CardGuru /> 
       <Hero />
-      <Berita />
-      <Eskul/>
-      <CardGuru />
       <Dudi />
+      <Eskul/>
+      <Berita />
       <Footer />
     </main>
   );

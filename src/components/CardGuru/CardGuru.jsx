@@ -11,19 +11,26 @@ import anis from "../../assets/guru/anis.webp";
 import aldi from "../../assets/guru/aldi.webp";
 import adis from "../../assets/guru/adis.webp"; 
 import may from "../../assets/guru/may.webp"; 
-import nisa from "../../assets/guru/nisa.png"; 
+import nisa from "../../assets/guru/nisa.webp"; 
 import ulya from "../../assets/guru/ulya.webp"; 
 import rofi from "../../assets/guru/rofi.webp"; 
-import fadly from "../../assets/guru/fadly.png"; 
+import fadly from "../../assets/guru/fadly.webp"; 
 import ros from "../../assets/guru/ros.webp"; 
 import dimas from "../../assets/guru/dimas.webp"; 
 import irfan from "../../assets/guru/irfan.webp"; 
+import aman from "../../assets/guru/aman.webp"; 
 
 let data = [
   {
+    img: aman,
+    name: "Kepala Sekolah",
+    subject: "Abdul Rahman, S.Kom",
+    disc: "\"Kembangkan potensi diri kamu di SMK Garuda Mahadhika!\""
+  },
+  {
     img: adis,
     name: "Kepala Tata Usaha",
-    subject: "Adis Maylinda, S.Kom",
+    subject: "Adis Maylinda, S.Sos.I",
     disc: "\"Kembangkan potensi diri kamu di SMK Garuda Mahadhika!\""
   },
   {
@@ -152,8 +159,16 @@ const settings = {
 const Project = ({ item }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-4 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-xl flex flex-col justify-between w-full max-w-[250px] md:max-w-[300px] h-auto mx-auto sm:w-[100%] md:w-[90%] lg:w-[80%] perspective-1000">
-      <div className="relative w-full h-[200px] mb-4 sm:h-[250px] md:h-[300px]">
-        <img className="absolute inset-0 object-cover w-full h-full rounded-lg" src={item.img} alt={item.name || "Guru"} />
+      <div className="relative w-full h-[200px] mb-4 sm:h-[250px] md:h-[300px] flex items-center justify-center">
+        <img 
+          className="object-contain w-auto h-full rounded-lg" 
+          src={item.img} 
+          alt={item.name || "Guru"} 
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%'
+          }}
+        />
       </div>
       <h3 className="text-lg font-bold text-gray-800">{item.name}</h3>
       <p className="mb-2 text-sm text-gray-500">{item.subject}</p>

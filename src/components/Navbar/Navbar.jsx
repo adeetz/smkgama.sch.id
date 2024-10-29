@@ -74,9 +74,14 @@ const Navbar = () => {
 
                         {/* CTA Button Section */}
                         <div className="hidden space-x-6 lg:block">
-                            <button className="px-6 py-2 font-semibold text-white rounded-full bg-secondary">
+                            <a 
+                                href="https://ppdb.smkgama.sch.id/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-6 py-2 font-semibold text-white transition-all duration-300 rounded-full bg-secondary hover:bg-opacity-90"
+                            >
                                 DAFTAR
-                            </button>
+                            </a>
                         </div>
 
                         {/* Mobile Hamburger Menu */}

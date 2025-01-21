@@ -19,13 +19,15 @@ import ros from "../../assets/guru/ros.webp";
 import dimas from "../../assets/guru/dimas.webp"; 
 import irfan from "../../assets/guru/irfan.webp"; 
 import aman from "../../assets/guru/aman.webp"; 
+import akmal from "../../assets/guru/akmal.webp"; 
+import riza from "../../assets/guru/riza.webp"; 
 
 let data = [
   {
     img: aman,
     name: "Kepala Sekolah",
     subject: "Abdul Rahman, S.Kom",
-    disc: "\"Kembangkan potensi diri kamu di SMK Garuda Mahadhika!\""
+    disc: "\"SMK Garuda Mahadhika: Terbang Tinggi, Raih Mimpi!\""
   },
   {
     img: adis,
@@ -110,6 +112,18 @@ let data = [
     name: "Guru Produktif TKJT",
     subject: "Irfan Noor Asyikin, S.Kom",
     disc: "\"Belajar Praktis di Lingkungan yang Inspiratif, Siapkan Diri untuk Sukses di Dunia Kerja!\""
+  },
+  {
+    img: akmal,
+    name: "Guru Produktif TKJT",
+    subject: "M. Akmal Alifi, S.Kom",
+    disc: "\"Siap Sukses? SMK Garuda Mahadhika Jawabannya!\""
+  },
+  {
+    img: riza,
+    name: "Guru Produktif TKJT",
+    subject: "Muhammad Riza Fahlifi, S.Kom",
+    disc: "\"Garuda Mahadhika - Tempa Skill, Raih Prestasi!\""
   },
 ];
 

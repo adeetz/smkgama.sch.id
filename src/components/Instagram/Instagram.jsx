@@ -29,20 +29,20 @@ const SocialMediaEmbed = () => {
   }, []);
 
   return (
-    <div className="p-4 sm:p-8 bg-gradient-to-br from-purple-100 to-indigo-100 min-h-screen flex items-center justify-center">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-6xl w-full mx-auto overflow-hidden">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-8 pt-4 sm:pt-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+    <div className="flex items-center justify-center min-h-screen p-4 sm:p-8 bg-gradient-to-br from-purple-100 to-indigo-100">
+      <div className="w-full max-w-6xl mx-auto overflow-hidden bg-white shadow-2xl rounded-2xl">
+        <h2 className="pt-4 mb-4 text-2xl font-bold text-center text-transparent text-gray-800 sm:text-3xl sm:mb-8 sm:pt-8 bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
           Connect With Us on Social Media
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-center gap-4 sm:gap-8 p-4 sm:p-8">
+        <div className="flex flex-col justify-center gap-4 p-4 md:flex-row sm:gap-8 sm:p-8">
           {/* Instagram Embed */}
-          <div className="w-full md:w-1/2 transition-all duration-300 hover:scale-105">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 sm:mb-4 p-2 sm:p-4 bg-gradient-to-r from-purple-100 to-indigo-100">
+          <div className="w-full transition-all duration-300 md:w-1/2 hover:scale-105">
+            <div className="overflow-hidden bg-white shadow-lg rounded-xl">
+              <h3 className="p-2 mb-2 text-lg font-semibold text-gray-800 sm:text-xl sm:mb-4 sm:p-4 bg-gradient-to-r from-purple-100 to-indigo-100">
                 Latest on Instagram
               </h3>
-              <div className="p-2 sm:p-4 aspect-square">
+              <div className={`p-2 sm:p-4 ${isMobile ? 'aspect-[9/16]' : 'aspect-square'}`}>
                 <blockquote
                   className="instagram-media"
                   data-instgrm-permalink="https://www.instagram.com/smkgama_garudamahadhika"
@@ -121,9 +121,9 @@ const SocialMediaEmbed = () => {
           </div>
 
           {/* TikTok Embed */}
-          <div className="w-full md:w-1/2 transition-all duration-300 hover:scale-105">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 sm:mb-4 p-2 sm:p-4 bg-gradient-to-r from-indigo-100 to-purple-100">
+          <div className="w-full transition-all duration-300 md:w-1/2 hover:scale-105">
+            <div className="overflow-hidden bg-white shadow-lg rounded-xl">
+              <h3 className="p-2 mb-2 text-lg font-semibold text-gray-800 sm:text-xl sm:mb-4 sm:p-4 bg-gradient-to-r from-indigo-100 to-purple-100">
                 Trending on TikTok
               </h3>
               <div className={`p-2 sm:p-4 ${isMobile ? 'aspect-[9/16]' : 'aspect-square'}`}>

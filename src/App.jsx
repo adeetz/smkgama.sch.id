@@ -9,7 +9,7 @@ import Dudi from './components/Dudi/Dudi';
 import ImageWithCaption from "./components/Carousel/Carousel";
 import InstagramEmbed from "./components/Instagram/Instagram";
 import Eskul from "./components/Eskul/Eskul";
-import Berita from "./components/Berita/berita";
+// import Berita from "./components/Berita/berita";
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
       <Jurusan />
       <InstagramEmbed />
       <Hero />
-      <Berita />
+      {/* <Berita /> */}
       <Eskul/>
       <CardGuru />
       <Dudi />

@@ -45,7 +45,7 @@ const NavbarBanner = ({ navbarHeight }) => {
                     >
                         <span className="text-center sm:text-left">Pendaftaran Siswa Baru sudah dibuka, segera daftarkan dirimu!</span>
                         <a 
-                            href="#" 
+                            href="https://ppdb.smkgama.sch.id/daftarsiswa"
                             className="inline-block px-4 py-2 text-sm font-medium sm:text-base"
                             style={{ 
                                 backgroundColor: '#ffcf3a', 

@@ -78,7 +78,7 @@ const Products = () => {
                 <div className="p-4">
                   <p className="mb-4 text-sm text-gray-600 line-clamp-2">{item.desc}</p>
                   <motion.a
-                    href="#"
+                    href="https://ppdb.smkgama.sch.id/daftarsiswa"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={`inline-block w-full py-2 text-sm font-medium text-white text-center rounded-lg transition-all bg-gradient-to-r ${item.color} hover:shadow-md`}
